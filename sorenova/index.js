@@ -31,6 +31,13 @@ const movementOffset = {
 }
 
 image.onload = () => {
+  if(localStorage.getItem('isWoke') == null || localStorage.getItem('isWoke') == 'false'){
+	  $("#wrapper").hide();
+	  $("#woke").show();
+  }else {
+	  $("#wrapper").show();
+	  $("#woke").hide();
+  }
   startLooping();
   window.resizeTo("600", "600");
   $('.deny').click(function() {
@@ -96,4 +103,19 @@ function loopDraw() {
 
 function startLooping() {
   requestAnimationFrame(loopDraw);
+}
+
+isWoke = function () {
+  $('#woke').hide();
+  $('#wrapper').show();
+  localStorage.setItem('isWoke', true);
+}
+
+isRhea = function () {
+  $('#woke').addClass('under');
+  localStorage.setItem('isWoke', false);
+}
+
+goBack = function () {
+    window.history.back();
 }
