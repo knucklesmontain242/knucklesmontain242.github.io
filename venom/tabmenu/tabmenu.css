@@ -1,0 +1,81 @@
+#informationTab .tswTabBox
+{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 10px;
+}
+#informationTab .tswTabBox li
+{
+	float: left;
+	text-align: center;
+	background-color: #f0f0f0;
+	margin-right: 10px;
+	background-position: top right;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	color: #8d7d78;
+}
+#informationTab .tswTabBox li {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+	border-left: 1px solid #8d7d78;
+	border-right: 1px solid #8d7d78;
+	border-top: 1px solid #8d7d78;
+}
+#informationTab .tswTabBox li div.tswTabOuterDiv
+{
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+#informationTab .tswTabBox li div div
+{
+	padding: 4px 10px 0px 10px;
+}
+#informationTab .tswTabBox li a
+{
+	display: block;
+	padding-top: 1px;
+}
+#informationTab .tswTabBox li.tswTabSelected
+{
+	background-color: #fffaf0;
+	padding-top: 0px;
+	cursor: default;
+	color: #49413e;
+}
+#informationTab .tswTabBox li.tswTabSelected div div
+{
+	border-bottom: 1px solid #fffaf0;
+	position: relative;
+	top: 1px;
+	z-index: 5;
+}
+#informationTab .tswTabBox li.tswTabSelected a
+{
+	padding-top: 0px;
+}
+#informationTab .tswTabContent
+{
+	clear: both;
+	text-align: left;
+}
+#informationTab .tswTabContent div.tswTabContentUnselected,
+#informationTab .tswTabContent div.tswTabContentSelected
+{
+	position: absolute;
+	top: 0px;
+	border: 1px solid #8d7d78;
+	background-color: #fffaf0;
+	padding: 4px 4px 4px 4px;
+	display: none;
+	visibility: hidden;
+	color: #49413e;
+}
+#informationTab .tswTabContent div.tswTabContentSelected
+{
+	position: static;
+	display: block;
+	visibility: visible;
+	zoom: 1;
+}
