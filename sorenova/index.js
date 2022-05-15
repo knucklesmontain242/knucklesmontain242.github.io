@@ -1,8 +1,12 @@
 const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
+
+const image = new Image();
+image.src = "https://64.media.tumblr.com/5fab0c4f5aed35975445f4cc572d3211/bd2cb923d430c466-f0/s500x750/2e9b160d08a1e8e42cb9dd0f7780ae3e52fe93b1.png";
+
 const nordDimensions = {
-  width: 353 * 1.2,
-  height: 325 * 1.2
+  width: (image.width > 400 ? image.width : 400) * 1.2,
+  height: (image.height > 400 ? image.height : 400) * 1.2
 };
 
 const startTime = Date.now();
@@ -11,8 +15,6 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 context.translate(window.innerWidth / 2, window.innerHeight / 2);
 
-const image = new Image();
-image.src = "https://64.media.tumblr.com/5fab0c4f5aed35975445f4cc572d3211/bd2cb923d430c466-f0/s500x750/2e9b160d08a1e8e42cb9dd0f7780ae3e52fe93b1.png";
 
 const loopingnords = 40;
 const offsetDistance = 120;
@@ -32,11 +34,9 @@ const movementOffset = {
 
 image.onload = () => {
   if(localStorage.getItem('isWoke') == null || localStorage.getItem('isWoke') == 'false'){
-	  $("#wrapper").hide();
-	  $("#woke").show();
+	  isRhea(false);
   }else {
-	  $("#wrapper").show();
-	  $("#woke").hide();
+	  isWoke();
   }
   startLooping();
   window.resizeTo("600", "600");
@@ -107,12 +107,15 @@ function startLooping() {
 
 isWoke = function () {
   $('#woke').hide();
-  $('#wrapper').show();
-  localStorage.setItem('isWoke', true);
+  $("#blur").hide();
+     localStorage.setItem('isWoke', true);
 }
 
-isRhea = function () {
-  $('#woke').addClass('under');
+isRhea = function (showUnder) {
+  if(showUnder){
+    $('#woke').addClass('under');
+  }
+  $("#blur").show();
   localStorage.setItem('isWoke', false);
 }
 
