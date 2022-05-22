@@ -1,0 +1,43 @@
+body,html {
+    background-color: #e5e1d8;
+    color: #000;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    max-width: 100vw;
+    max-height: 100vh;
+    padding:0;
+    margin:0;
+    overflow: hidden;
+}
+video { 
+    position: fixed;
+    z-index: 1;;
+    padding:0;
+    margin:0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index:1;
+}
+#particles-header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    margin:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index:2;
+}
+*{
+	text-transform: lowercase;
+}
+@media screen and (min-width: 700px) {
+  body {
+    font-size: 137.5%;
+  }
+}
