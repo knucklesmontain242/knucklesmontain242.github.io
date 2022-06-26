@@ -1,0 +1,60 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  font-family: 'Roberto', sans-serif;
+  background: #151b1e;
+  color: #fff1e6;
+}
+
+div.jailbars {
+  position:fixed;
+  z-index:999;
+  width:100vw;
+  height:100vw;
+  overflow: none;
+  margin:0;
+  padding:0;
+  background: url(https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/70/Iron_Bars_%28texture%29_JE1_BE1.png/revision/latest?cb=20191122225838);
+  
+}
+
+body div.jailee{
+  position:fixed;
+  z-index:888;
+  background: url(http://www.chatwitch.com/images/guardian-sm.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width:100%;
+  height:100vh;
+  overflow: none;
+  margin:0;
+  padding:0;
+}
+
+body .yeah_boy_that_is_what_is_up_dog{
+  opacity: 0;
+  border-radius:10px;
+	border:4px solid rgba(0,0,0,0.9);
+	box-shadow: 0 0 30px 20px rgba(0,0,0,0.7);
+	position:absolute;
+	z-index:1000;
+	top:15%; right:15%; bottom:15%; left:15%;	
+	background-color:rgba(255,255,255,0.75);
+	font-family: 'Roboto', sans-serif;
+	color:#212121;
+	padding:30px;
+	overflow:auto;
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+
+#smaller_thing {
+  width:80%;
+  margin: auto;
+}
