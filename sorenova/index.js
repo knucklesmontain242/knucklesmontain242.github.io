@@ -33,7 +33,7 @@ const movementOffset = {
 }
 
 image.onload = () => {
-  if(localStorage.getItem('isWoke') == null || localStorage.getItem('isWoke') == 'false'){
+  if(sessionStorage.getItem('isWoke') == null || sessionStorage.getItem('isWoke') == 'false'){
 	  isRhea(false);
   }else {
 	  isWoke();
@@ -108,7 +108,7 @@ function startLooping() {
 isWoke = function () {
   $('#woke').hide();
   $("#blur").hide();
-     localStorage.setItem('isWoke', true);
+  sessionStorage.setItem('isWoke', true);
 }
 
 isRhea = function (showUnder) {
@@ -116,7 +116,7 @@ isRhea = function (showUnder) {
     $('#woke').addClass('under');
   }
   $("#blur").show();
-  localStorage.setItem('isWoke', false);
+  sessionStorage.setItem('isWoke', false);
 }
 
 goBack = function () {
