@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>The 'Project' (PATENT PENDING)</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="./index.js"></script>
+    <link rel='stylesheet' href='./index.css'>
+  </head>
+  <body>
+    <div class="ui container" style="margin-top: 40px;">
+      <h1 class="ui header title">Killer Streak Tournament</h1>
+      <div class="ui buttons" style="margin-bottom: 25px;">
+        <button id="nextMatch" class="btn btn-red">Generate Next Match</button>
+        <div class="or" data-text="OR"></div>
+        <button id="restart" class="btn btn-dark">Restart Tournament</button>
+      </div>
+      <div class="ui two column stackable grid">
+        <div class="ten wide column">
+          <div id="currentMatch" class="ui segment panel" style="min-height: 650px; overflow-y: auto;">
+            <i class="empty-text">No match generated yet.</i>
+          </div>
+        </div>
+        <div class="six wide column">
+          <h2 class="ui header sub-header">Previous Matches (<span id="previousCount">0</span>) </h2>
+          <div class="ui segment panel" style="height: 280px; overflow-y: auto;">
+            <div id="previousMatches" class="ui relaxed divided list list"></div>
+          </div>
+          <h2 class="ui header sub-header" style="margin-top: 20px;">Remaining Matches (<span id="remainingCount">0</span>) </h2>
+          <div class="ui segment panel" style="height: 280px; overflow-y: auto;">
+            <div id="remainingList" class="ui relaxed divided list list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
