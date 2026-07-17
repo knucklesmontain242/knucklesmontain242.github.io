@@ -1,0 +1,193 @@
+body {
+    background: #1b1c1d;
+    color: #e0e0e0;
+    font-family: 'Saira', sans-serif;
+    min-height: 100vh;
+    letter-spacing: 0.5px;
+}
+
+.ui.segment, 
+.ui.segment div,
+.ui.segment .item,
+.ui.segment .content {
+    color: #ffffff !important;
+}
+
+.ui.segment {
+    background: #2b2c2d !important;
+}
+
+.ui.header {
+    color: #ffffff !important;
+}
+
+b, i { 
+    color: #a7c7e7;
+}
+
+.btn {
+    font-family: 'Bebas Neue', sans-serif !important;
+    font-size: 1.3rem !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-red {
+    background: #8c0000;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000;
+    box-shadow: 0 0 5px rgba(140, 0, 0, 0.5);
+}
+
+.btn-red:hover {
+    background: #b30000;
+    box-shadow: 0 0 15px rgba(179, 0, 0, 0.8);
+    transform: translateY(-1px);
+}
+
+.btn-dark {
+    background: #202124;
+    color: #b0b0b0;
+}
+
+.btn-dark:hover {
+    background: #323438;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.ui.buttons .or:before {
+    background: #111111 !important;
+    color: #8c0000 !important;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    border: 1px solid #444444;
+}
+
+@keyframes dwight_freakout {
+    0%   { transform: scaleX(1) rotate(0deg) translateX(0); }
+    5%   { transform: scaleX(1) rotate(1deg) translateX(-2px); }
+    10%  { transform: scaleX(1) rotate(2deg) translateX(2px); }
+    15%  { transform: scaleX(1) rotate(1deg) translateX(-1px); }
+    20%  { transform: scaleX(1) rotate(0deg) translateX(1px); }
+    30%  { transform: scaleX(1) rotate(0deg) translateX(-2px); }
+    40%  { transform: scaleX(1) rotate(1deg) translateX(2px); }
+    50%  { transform: scaleX(-1) rotate(-2deg) translateX(1px); }
+    55%  { transform: scaleX(-1) rotate(-1deg) translateX(-2px); }
+    60%  { transform: scaleX(-1) rotate(1deg) translateX(2px); }
+    70%  { transform: scaleX(-1) rotate(0deg) translateX(-1px); }
+    80%  { transform: scaleX(-1) rotate(0deg) translateX(1px); }
+    100% { transform: scaleX(1) rotate(0deg) translateX(0); }
+}
+
+.flip { 
+    transform: scaleX(-1);
+}
+
+.dwight {
+    animation: dwight_freakout 1.6s infinite cubic-bezier(.36, .07, .19, .97);
+}
+@media (max-width: 900px) {
+    .title {
+        font-size: 2.4rem !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .ui.container {
+        margin-top: 15px !important;
+        padding: 0 10px !important;
+    }
+
+    .title {
+        font-size: 1.8rem !important;
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    .ui.buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100%;
+    }
+
+    .ui.buttons .or {
+        display: none !important;
+    }
+
+    .ui.buttons .btn {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+
+    .ui.buttons .btn:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .ui.two.column.grid > .column,
+    .ui.three.column.grid > .column {
+        width: 100% !important;
+    }
+
+    .ui.card {
+        margin-bottom: 15px !important;
+        width: 100% !important;
+    }
+
+    .ui.card .image img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .ui.four.cards {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .ui.four.cards .card {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .panel {
+        padding: 10px !important;
+    }
+
+    #currentMatch {
+        min-height: auto !important;
+        height: auto !important;
+        max-height: none !important;
+    }
+
+    #previousMatches, 
+    #remainingList {
+        height: 200px !important;
+        max-height: 200px !important;
+    }
+
+    .sub-header {
+        text-align: center !important;
+        font-size: 1.4rem !important;
+    }
+
+    .dwight {
+        height: 80px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .ui.center.aligned.header {
+        font-size: 1.6rem !important;
+        margin-top: 10px !important;
+    }
+}
+
+
+.perk:nth-child(3) {
+  grid-column: 1 / span 2;
+  justify-self: center;
+} 
